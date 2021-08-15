@@ -1,8 +1,8 @@
 version: 0.0
-os: linux
+os: ubuntu
 files:
   - source: index.html
-    destination: /var/www/html
+    destination: /var/www/html/index.html
 permissions:
   - object: /var/www/html
     pattern: "*.html"
