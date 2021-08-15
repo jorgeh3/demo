@@ -8,11 +8,7 @@ hooks:
     - location: scripts/before_install.sh
       timeout: 300
       runas: root
-permissions:
-  - object: /var/www/html
-    pattern: "*.html"
-    owner: root
-    group: root
-    mode: 755
-    type:
-      - file
+  AfterInstall:
+    - location: scripts/change_permissions.sh
+      timeout: 300
+      runas: root
