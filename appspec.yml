@@ -2,7 +2,9 @@ version: 0.0
 os: linux
 files:
   - source: index.html
-    destination: /var/www/html/
+    destination: /var/www/your_domain/
+  - source: your_domain.conf
+    destination: /etc/apache2/sites-available/
 hooks:
   BeforeInstall:
     - location: scripts/before_install.sh
